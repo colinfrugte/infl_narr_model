@@ -5,7 +5,7 @@ pydantic==2.8.2
 pydantic-settings==2.2.1
 
 # --- NLP Dependencies ---
-torch==2.4.1
+torch==2.9.0
 transformers==4.45.2
 sentence-transformers==3.0.1
 gliner==0.2.9
