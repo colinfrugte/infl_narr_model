@@ -9,10 +9,19 @@ from typing import List
 import torch
 from gliner import GLiNER
 
+from dotenv import load_dotenv
+load_dotenv()  # reads .env file
 
-model_path = "inflation-narrative/checkpoint-108"
-tokenizer = AutoTokenizer.from_pretrained(model_path)
-model = AutoModelForSequenceClassification.from_pretrained(model_path)
+import os
+token = os.getenv("HUGGINGFACE_HUB_TOKEN")
+
+
+model_name = "gamatoad/inflation-narrative"
+
+tokenizer = AutoTokenizer.from_pretrained(model_name)
+model = AutoModelForSequenceClassification.from_pretrained(model_name)
+
+
 model_gliner = GLiNER.from_pretrained("urchade/gliner_medium-v2.1")
 model_edges = CrossEncoder("cross-encoder/ms-marco-MiniLM-L6-v2")
 app = FastAPI()

@@ -106,3 +106,6 @@ venv.bak/
 
 # Mac OS
 .DS_Store
+
+# test files
+.huggingface_login_test.ipynb
