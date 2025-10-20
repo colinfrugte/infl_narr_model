@@ -4,7 +4,7 @@ uvicorn==0.30.6
 pydantic==2.8.2
 pydantic-settings==2.2.1
 
-# --- ML/NLP Dependencies ---
+# --- NLP Dependencies ---
 torch==2.4.1
 transformers==4.45.2
 sentence-transformers==3.0.1
